@@ -1,9 +1,12 @@
 if (Meteor.isClient) {
   var MAP_ZOOM = 15;
 
-  Meteor.startup(function() {
-    GoogleMaps.load();
+ Meteor.startup(function() {  
+  GoogleMaps.load({
+    v : '3',
+    key: 'AIzaSyD81kt-LoD3_Vqyqhd1yw9YlHq8J3SHpEg'
   });
+});
 
   Template.map.onCreated(function() {
     var self = this;
